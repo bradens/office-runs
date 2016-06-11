@@ -1,0 +1,26 @@
+{
+  "name": "runmap",
+  "version": "1.0.0",
+  "description": "heatmaps generated from gpx files",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/test.js",
+    "serve": "python -m SimpleHTTPServer",
+    "build": "./node_modules/.bin/browserify -t brfs ./src/main.js -o ./js/dist.js",
+    "watch": "./node_modules/.bin/watchify ./src/main.js -o ./js/dist.js"
+  },
+  "author": "dmamills",
+  "dependencies": {
+    "async": "^1.5.2",
+    "parse-gpx": "^1.0.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "browserify": "^13.0.1",
+    "mocha": "^2.5.3",
+    "reactify": "^1.1.1",
+    "should": "^9.0.2",
+    "watchify": "^3.7.0"
+  }
+}

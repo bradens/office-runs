@@ -1386,7 +1386,7 @@ window.onMapsLoaded = () =>{
     let runs = [1,2,3,4,5,6,7,8,9,10].map(n => `${n}.json`);
 
     async.reduce(runs, [], (acc, file, cb) => {
-        fetch(`/runs/${file}`)
+        fetch(`runs/${file}`)
         .then(res => res.json())
         .then(points => {
             acc = acc.concat(points);
